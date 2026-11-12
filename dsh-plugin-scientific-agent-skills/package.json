@@ -1,0 +1,41 @@
+{
+  "name": "dsh-plugin-scientific-agent-skills",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "DeepSeek Harness plugin bundle that registers 177 scientific/research Agent Skills (K-Dense scientific-agent-skills, adapted for DeepSeek) with DSH's skill catalog.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ivringmk/deepseek-skill.git",
+    "directory": "dsh-plugin-scientific-agent-skills"
+  },
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "skills"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@deepseek-ai/schemastery": "3.18.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "agent-skills",
+    "science",
+    "research"
+  ],
+  "license": "MIT"
+}
